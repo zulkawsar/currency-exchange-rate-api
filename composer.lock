@@ -1810,6 +1810,59 @@
             "time": "2023-02-06T13:44:46+00:00"
         },
         {
+            "name": "mtownsend/xml-to-array",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mtownsend5512/xml-to-array.git",
+                "reference": "0734720a8462dba36d90fb8b2723bf46af0091f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mtownsend5512/xml-to-array/zipball/0734720a8462dba36d90fb8b2723bf46af0091f4",
+                "reference": "0734720a8462dba36d90fb8b2723bf46af0091f4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.0|~8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Mtownsend\\XmlToArray\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Townsend",
+                    "email": "mtownsend5512@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easily convert valid xml to a php array.",
+            "keywords": [
+                "array",
+                "convert",
+                "laravel",
+                "xml"
+            ],
+            "support": {
+                "issues": "https://github.com/mtownsend5512/xml-to-array/issues",
+                "source": "https://github.com/mtownsend5512/xml-to-array/tree/2.0.0"
+            },
+            "time": "2021-02-27T22:39:18+00:00"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "2.66.0",
             "source": {
@@ -5412,7 +5465,10 @@
             "dist": {
                 "type": "path",
                 "url": "packages/zulkawsar/currency-exchange-rate-api",
-                "reference": "20c9c88604a8fa81b36e9d4d0995e73a9ac28b6d"
+                "reference": "aa2aef18588a916076ee3dfa9b374ec5768a593c"
+            },
+            "require": {
+                "mtownsend/xml-to-array": "^2.0"
             },
             "type": "project",
             "extra": {
@@ -5420,11 +5476,15 @@
                     "providers": [
                         "Zulkawsar\\CurrencyExchangeRateApi\\CurrencyExchangeServiceProvider"
                     ]
+                },
+                "aliases": {
+                    "CurrencyExchangeRateApi": "Zulkawsar\\CurrencyExchangeRateApi\\Facades\\CurrencyExchangeRateApi"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Zulkawsar\\CurrencyExchangeRateApi\\": "src/"
+                    "Zulkawsar\\CurrencyExchangeRateApi\\": "src/",
+                    "Zulkawsar\\CurrencyExchangeRateApi\\Tests\\": "tests/"
                 }
             },
             "license": [

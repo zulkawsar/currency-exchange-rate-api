@@ -5,7 +5,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Zulkawsar\\CurrencyExchangeRateApi\\": "src/"
+            "Zulkawsar\\CurrencyExchangeRateApi\\": "src/",
+            "Zulkawsar\\CurrencyExchangeRateApi\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -15,7 +16,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "mtownsend/xml-to-array": "^2.0"
+    },
     "extra": {
         "laravel": {
             "providers": [

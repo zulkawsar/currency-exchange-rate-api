@@ -1,6 +1,7 @@
 <?php
 
 namespace Zulkawsar\CurrencyExchangeRateApi;
+
 use Illuminate\Support\ServiceProvider;
 
 class CurrencyExchangeServiceProvider extends ServiceProvider
@@ -13,7 +14,9 @@ class CurrencyExchangeServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-	    dd('its working');
+		$this->app->singleton(CurrencyExchangeRateApi::class, function(){
+			return new CurrencyExchangeRateApi();
+		});
 	}
 
 	/**
