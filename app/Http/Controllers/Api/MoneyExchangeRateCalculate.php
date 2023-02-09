@@ -8,15 +8,16 @@ use Zulkawsar\CurrencyExchangeRateApi\CurrencyExchangeRateApi;
 
 class MoneyExchangeRateCalculate extends Controller
 {
-    protected $api;
 
-    public function index()
+    public function index(CurrencyExchange $request) : mixed
     {
-        
-        $amount = (new CurrencyExchangeRateApi)->calculate('DKK', 0);
+        $validated  = $request->validated();
+        if ($validated->fails() ) {
+            return response()->json(['status' => 422, 'error' => 'Please check the param data']);
+        }
         return response()->json([
             'status' => 200,
-            'rate' => $amount
+            'rate' => (new CurrencyExchangeRateApi)->calculate('DKK', 0)
         ]);
     }
 }
