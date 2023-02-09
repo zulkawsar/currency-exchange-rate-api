@@ -1,0 +1,26 @@
+{
+    "name": "zulkawsar/currency-exchange-rate-api",
+    "description": "currency-exchange-rate-api",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Zulkawsar\\CurrencyExchangeRateApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "zulkawsar",
+            "email": "zulkawsar@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zulkawsar\\CurrencyExchangeRateApi\\CurrencyExchangeServiceProvider"
+            ]
+        }
+    }
+}

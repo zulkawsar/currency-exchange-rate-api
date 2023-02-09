@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe33f98a750b8c5a51b30c78bd3fab21",
+    "content-hash": "c402e69409c9433af5a270260b178786",
     "packages": [
         {
             "name": "brick/math",
@@ -5405,6 +5405,41 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "zulkawsar/currency-exchange-rate-api",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/zulkawsar/currency-exchange-rate-api",
+                "reference": "20c9c88604a8fa81b36e9d4d0995e73a9ac28b6d"
+            },
+            "type": "project",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Zulkawsar\\CurrencyExchangeRateApi\\CurrencyExchangeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zulkawsar\\CurrencyExchangeRateApi\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "zulkawsar",
+                    "email": "zulkawsar@gmail.com"
+                }
+            ],
+            "description": "currency-exchange-rate-api",
+            "transport-options": {
+                "relative": true
+            }
         }
     ],
     "packages-dev": [
@@ -7931,7 +7966,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "zulkawsar/currency-exchange-rate-api": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
