@@ -1,8 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\MoneyExchangeRateCalculate;
-
+use Zulkawsar\CurrencyExchangeRateApi\Http\Controllers\MoneyExchangeRate;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +11,4 @@ use App\Http\Controllers\Api\MoneyExchangeRateCalculate;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/test', [MoneyExchangeRateCalculate::class, 'index']);
-\CER::routes();
+Route::get('/cer',[MoneyExchangeRate::class, 'index'])->name('cer');

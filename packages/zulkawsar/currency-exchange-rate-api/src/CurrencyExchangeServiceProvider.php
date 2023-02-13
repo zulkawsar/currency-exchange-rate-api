@@ -3,6 +3,7 @@
 namespace Zulkawsar\CurrencyExchangeRateApi;
 
 use Illuminate\Support\ServiceProvider;
+use Zulkawsar\CurrencyExchangeRateApi\CER;
 
 class CurrencyExchangeServiceProvider extends ServiceProvider
 {
@@ -16,6 +17,9 @@ class CurrencyExchangeServiceProvider extends ServiceProvider
 	{
 		$this->app->singleton(CurrencyExchangeRateApi::class, function(){
 			return new CurrencyExchangeRateApi();
+		});
+		$this->app->singleton('cer', function(){
+			return new CER();
 		});
 	}
 

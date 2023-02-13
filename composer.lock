@@ -5465,7 +5465,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/zulkawsar/currency-exchange-rate-api",
-                "reference": "aa2aef18588a916076ee3dfa9b374ec5768a593c"
+                "reference": "7e45c03d11d99095c3c53451212f5038b383eea8"
             },
             "require": {
                 "mtownsend/xml-to-array": "^2.0"
@@ -5475,10 +5475,10 @@
                 "laravel": {
                     "providers": [
                         "Zulkawsar\\CurrencyExchangeRateApi\\CurrencyExchangeServiceProvider"
-                    ]
-                },
-                "aliases": {
-                    "CurrencyExchangeRateApi": "Zulkawsar\\CurrencyExchangeRateApi\\Facades\\CurrencyExchangeRateApi"
+                    ],
+                    "aliases": {
+                        "CER": "Zulkawsar\\CurrencyExchangeRateApi\\Facades\\CER"
+                    }
                 }
             },
             "autoload": {
@@ -8035,5 +8035,5 @@
         "php": "^8.0.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.0.0"
 }

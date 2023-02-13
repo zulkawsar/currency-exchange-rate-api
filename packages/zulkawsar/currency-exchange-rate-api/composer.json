@@ -23,7 +23,11 @@
         "laravel": {
             "providers": [
                 "Zulkawsar\\CurrencyExchangeRateApi\\CurrencyExchangeServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "CER": "Zulkawsar\\CurrencyExchangeRateApi\\Facades\\CER"
+            }
         }
+        
     }
 }
